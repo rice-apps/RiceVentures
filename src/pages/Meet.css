@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+.meetContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.meetUpperSection {
+    background-color: white;
+    padding-top: 2%;
+    margin-bottom: 8%;
+}
+
+.meetMiddleSection {
+    background-color: #c4c4c4;
+}
+
+.meetLowerSection {
+    background-color: white;
+}
+
+.meetContainer h1 {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3vw;
+    line-height: 2vh;
+    text-align: center;
+    color: #000000;
+}
+
+.meetUpperSection h1 {
+    margin-bottom: 5%;
+}
