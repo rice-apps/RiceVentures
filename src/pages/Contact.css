@@ -1,0 +1,138 @@
+.titleContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.title{
+    /* style the CONTACT US */
+    width: 468px;
+    height: 68px;
+    /* margin-left: 468px; */
+    margin-left: 242px;
+    top: 159px;
+    
+
+    font: PingFang SC;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 48px;
+    /* text-align: center;  */
+}
+
+.bottomContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+.messageContainer{
+    display: flex;
+    flex-direction: column;
+
+    /* why isn't this working? */
+    align-content: space-between;
+
+    justify-content: center;
+}
+.messageTitle{
+
+     width: 495px;
+     height: 42px;
+     margin-left: 162px; 
+
+
+     text-align: center;
+
+     font-style: normal;
+     font-weight: 600;
+     font-size: 30px;
+}
+.smallInput{
+    /* style the inputs */
+    margin-left: 116px;
+    height: 52px;
+    width: 608px;
+
+}
+.largeInput{
+    /* style the inputs */
+    margin-left: 116px;
+    height: 288px;
+    width: 608px;
+
+}
+.followContainer{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+
+}
+.followTitle{
+    width: 495px;
+    height: 42px;
+
+    
+
+    text-align: center;
+
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 42px;
+
+}
+.logoContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    /* how to space the buttons correctly? */
+
+}
+.firstButton{
+
+    width: 52px;
+    height: 52px;
+    /* margin-left: 925px; */
+
+    border-radius: 10px;
+}
+.secondButton{
+
+    width: 52px;
+    height: 52px;
+    /* margin-left: 1031px; */
+
+    border-radius: 10px;
+}
+.thirdButton{
+
+    width: 52px;
+    height: 52px;
+    /* margin-left: 1137px; */
+
+    border-radius: 10px;
+}
+
+.newsletterTitle{
+
+    width: 495px;
+    height: 42px;
+
+    font-style: normal;
+    font-family: PingFang SC;
+    font-size: 30px;
+    text-align: center;
+    line-height: 42px;
+    
+}
+
+.newsletter{
+    
+    width: 524px;
+    height: 52px;
+    background-color: #E5E5E5;
+
+    border-radius: 10px;
+}
