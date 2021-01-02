@@ -1,9 +1,12 @@
-import React from "react";
+import * as React from "react";
 
-const Join = () => {
-    return (
-        <h1>Join</h1>
-    )
-}
+// markup
+const JoinPage = () => {
+	return (
+		<main>
+			<title>Rice Ventures</title>
+		</main>
+	);
+};
 
-export default Join;
+export default JoinPage;

@@ -1,9 +1,12 @@
-import React from "react";
+import * as React from "react";
 
-const Contact = () => {
-    return (
-        <h1>Contact</h1>
-    )
-}
+// markup
+const ContactPage = () => {
+	return (
+		<main>
+			<title>Rice Ventures</title>
+		</main>
+	);
+};
 
-export default Contact;
+export default ContactPage;
