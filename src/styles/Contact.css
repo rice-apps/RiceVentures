@@ -1,0 +1,15 @@
+input, textarea {
+    @apply w-full my-5 p-5;
+}
+
+input, textarea, button {
+    @apply rounded-md;
+}
+
+.socialMediaButton {
+    @apply my-10 w-5 h-5 rounded-sm;
+}
+
+.submitButton {
+    @apply h-10 mt-5 px-20 bg-blue-500;
+}
