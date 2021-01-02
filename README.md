@@ -1,36 +1,32 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby minimal starter
+  Rice Ventures Website
 </h1>
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+1.  **Pull the latest version from here or clone the repo for the first time.**
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
-
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+    To pull the latest version, just run `git pull origin`. To clone the repo, find the HTTPS link above and use it with `git clone <link>`.
 
 2.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+    If you're not already inside the project folder, navigate inside and then run `npm run develop`.
 
     ```shell
-    cd my-gatsby-site/
+    cd rice-ventures/
     npm run develop
     ```
+    
+    Your site should now be running at http://localhost:8000! 
+    
+3.  **Create a new branch**
 
-3.  **Open the code and start customizing!**
+    Now that everything is setup, shut down the `npm run develop` with a <kbd>ctrl-c</kbd>. Next, run `git checkout -b feature/<branch name>` with <branch name> being an appropriate name for your task.
 
-    Your site is now running at http://localhost:8000!
+3.  **Finally, push this new branch upstream and then feel free to start working on your task!**
 
+    Push the branch upstream with `git push -u origin/feature/<branch name>` and then run `npm run develop` again to see your changes live throughout development.
+    
     Edit `src/pages/index.js` to see your site update in real-time!
 
 4.  **Learn more**
