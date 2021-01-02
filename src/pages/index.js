@@ -1,8 +1,10 @@
-import { Link } from "gatsby";
+import { graphql, Link } from "gatsby";
 import * as React from "react";
 
 // markup
-const FrontPage = () => {
+const FrontPage = ({ data }) => {
+	const mission = data.allContentfulMission.nodes[0].mission;
+
 	return (
 		<main>
 			<title>Rice Ventures</title>
@@ -10,9 +12,20 @@ const FrontPage = () => {
 				<Link to="/meet">Meet</Link>
 				<Link to="/join">Join</Link>
 				<Link to="/contact">Contact</Link>
+				<p className="font-extrabold text-lg">{mission}</p>
 			</div>
 		</main>
 	);
 };
+
+export const query = graphql`
+	query {
+		allContentfulMission {
+			nodes {
+				mission
+			}
+		}
+	}
+`;
 
 export default FrontPage;
