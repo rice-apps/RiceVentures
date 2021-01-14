@@ -1,5 +1,6 @@
 import * as React from "react";
 import "../styles/Contact.css";
+import Footer from './../components/Footer.js';
 
 // markup
 const ContactPage = () => {
@@ -50,6 +51,7 @@ const ContactPage = () => {
 					</div>
 				</div>
 			</div>
+			<Footer/>
 		</main>
 	);
 };

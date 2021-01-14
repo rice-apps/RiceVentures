@@ -1,6 +1,7 @@
 import * as React from "react";
 import MemberBoxes from "../components/MemberBoxes";
 import "../styles/Meet.css";
+import Footer from './../components/Footer.js';
 
 // markup
 const MeetPage = () => {
@@ -19,6 +20,7 @@ const MeetPage = () => {
 					<h1>PRESENT MENTORS AND SPEAKERS</h1>
 				</div>
 			</div>
+			<Footer/>
 		</main>
 	);
 };

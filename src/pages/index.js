@@ -1,5 +1,6 @@
 import { graphql, Link } from "gatsby";
 import * as React from "react";
+import Footer from './../components/Footer.js';
 
 // markup
 const FrontPage = ({ data }) => {
@@ -14,6 +15,7 @@ const FrontPage = ({ data }) => {
 				<Link to="/contact">Contact</Link>
 				<p className="font-extrabold text-lg">{mission}</p>
 			</div>
+			<Footer />
 		</main>
 	);
 };
