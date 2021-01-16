@@ -36,7 +36,7 @@ function Footer() {
 	);
 
 	return (
-		<div className="bg-navy text-white flex items-center justify-around h-20 xl:h-10 w-full absolute bottom-0">
+		<div className="bg-navy text-white flex items-center justify-around h-20 xl:h-10 w-full">
 			{isBrowser ? (
 				<h2 className="flex flex-row text-s">
 					Rice Ventures © | Email: team@riceventures.org | {facebook}{" "}
