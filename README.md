@@ -1,44 +1,70 @@
-<h1 align="center">
-  Rice Ventures Website
-</h1>
+# Getting Started with Create React App
 
-## 🚀 Quick start
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-1.  **Pull the latest version from here or clone the repo for the first time.**
+## Available Scripts
 
-    To pull the latest version, just run `git pull origin`. To clone the repo, find the HTTPS link above and use it with `git clone <link>`.
+In the project directory, you can run:
 
-2.  **Start developing.**
+### `yarn start`
 
-    If you're not already inside the project folder, navigate inside and then run `npm run develop`.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-    ```shell
-    cd rice-ventures/
-    npm run develop
-    ```
-    
-    Your site should now be running at http://localhost:8000! 
-    
-3.  **Create a new branch**
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-    Now that everything is setup, shut down the `npm run develop` with a <kbd>ctrl-c</kbd>. Next, run `git checkout -b feature/<branch name>` with <branch name> being an appropriate name for your task.
+### `yarn test`
 
-3.  **Finally, push this new branch upstream and then feel free to start working on your task!**
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-    Push the branch upstream with `git push -u origin/feature/<branch name>` and then run `npm run develop` again to see your changes live throughout development.
-    
-    Edit `src/pages/index.js` to see your site update in real-time!
+### `yarn build`
 
-4.  **Learn more**
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+### `yarn eject`
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
