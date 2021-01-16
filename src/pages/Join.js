@@ -2,6 +2,7 @@ import * as React from "react";
 import LeaderImage from './../business-leader-2080772-1753761 1.png'
 import PositionBox from "../components/PositionBox";
 import "../styles/Join.css";
+
 // markup
 const Positions = [
    {
@@ -40,10 +41,12 @@ const JoinPage = () => {
        <main>
            <title>Rice Ventures</title>
            {/* align-items when only one column? */}
-           <div className="bg-teal-storm flex flex-col text-center h-screen items-center">
+           <div className="bg-teal-storm flex flex-col text-center xl:h-screen items-center">
                <h1 className="text-5xl my-10">Join Our Team</h1>
-               <img src={LeaderImage} className='w-1/2.7 h-1/4'/>
-               <div className='w-screen h-1/2 flex flex-row justify-evenly'>
+               <div>
+               <img src={LeaderImage} alt="Leadership Cartoon" />
+               </div>
+               <div className='w-full flex flex-col xl:flex-row xl:h-1/2 justify-evenly'>
                    {Positions.map((position) => (
                        <PositionBox {...position} />
                    ))}

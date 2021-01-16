@@ -1,4 +1,4 @@
 .applyButton{
-    @apply bg-navy w-full text-white text-sm text-center p-5 rounded-md;
+    @apply bg-navy w-3/4 xl:w-full text-white text-sm text-center py-5 rounded-md;
  }
  
