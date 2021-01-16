@@ -1,5 +1,5 @@
 import * as React from "react";
-import LeaderImage from "./../business-leader-2080772-1753761 1.png";
+import LeaderImage from '../images/business-leader-2080772-1753761 1.png'
 import PositionBox from "../components/PositionBox";
 import "../styles/Join.css";
 import Layout from "../layouts/Layout.js";
