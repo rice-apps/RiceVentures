@@ -11,5 +11,5 @@ input, textarea, button {
 }
 
 .submitButton {
-    @apply h-10 mt-5 px-20 bg-blue-500;
+    @apply h-10 mt-5 px-20 text-white bg-navy;
 }

@@ -7,15 +7,15 @@ module.exports = {
         'teal-storm': '#D2E8E6',
         'navy': '#153463',
       }
-
     },
     fontFamily: {
-			sans: ["Avenir", "sans-serif"],
-			serif: ["Avenir", "serif"],
-		},
+      sans: ["Avenir", "sans-serif"],
+      serif: ["Avenir", "serif"],
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+ }
+ 

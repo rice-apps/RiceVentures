@@ -7,7 +7,7 @@ const ContactPage = () => {
 	return (
 		<main>
 			<title>Rice Ventures</title>
-			<div className="bg-red-100 h-screen flex flex-col text-center">
+			<div className="bg-teal-storm h-screen flex flex-col text-center">
 				<h1 className="font-medium text-5xl my-10">CONTACT US</h1>
 				<div className="flex flex-row justify-evenly">
 					<div className="w-1/4 flex flex-col items-center text-center">
