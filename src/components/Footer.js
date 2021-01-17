@@ -1,14 +1,29 @@
-import { Link } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
 import { isBrowser, isMobile } from "react-device-detect";
+import { formatSocialLinks } from "../utils/contentfulUtils";
+
+const GET_SOCIAL_LINKS = graphql`
+	query {
+		socialLinks: allContentfulSocialMedia {
+			edges {
+				node {
+					socialMediaType
+					link
+				}
+			}
+		}
+	}
+`;
 
 function Footer() {
+	const data = useStaticQuery(GET_SOCIAL_LINKS);
+	const socialLinksDict = formatSocialLinks(data);
+
 	var facebook = (
 		<button
 			className="underline px-1"
-			onClick={() =>
-				window.open("https://www.facebook.com/RiceVenture/", "_blank")
-			}
+			onClick={() => window.open(socialLinksDict["Facebook"], "_blank")}
 		>
 			Facebook
 		</button>
@@ -16,12 +31,7 @@ function Footer() {
 	var linkedin = (
 		<button
 			className="underline px-1"
-			onClick={() =>
-				window.open(
-					"https://www.linkedin.com/company/rice-ventures",
-					"_blank"
-				)
-			}
+			onClick={() => window.open(socialLinksDict["LinkedIn"], "_blank")}
 		>
 			Linkedin
 		</button>

@@ -45,8 +45,6 @@ const JoinPage = ({ data }) => {
 					</div>
 				</div>
 			</Layout>
-
-			{/* <Footer /> */}
 		</main>
 	);
 };
