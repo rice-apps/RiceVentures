@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 12
       - run: npm install
-      - run: npm run build --path-prefixes
+      - run: npm run build --prefix-paths
       - name: Deploy
         uses: crazy-max/ghaction-github-pages@v1
         with:
