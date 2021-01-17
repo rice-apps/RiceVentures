@@ -46,12 +46,16 @@ const FrontPage = ({ data }) => {
 							{missionSubtext}
 						</p>
 						<div className="w-full xl:w-3/4 flex flex-row justify-center xl:justify-start uppercase">
-							<button className="py-1 px-3 xl:p-3 bg-navy text-white w-1/3 mr-10">
-								Meet the Team
-							</button>
-							<button className="py-1 px-3 xl:p-3 bg-white w-1/3">
-								Join
-							</button>
+							<Link className="w-1/3 mr-10" to="/meet">
+								<button className="py-1 px-3 xl:p-3 bg-navy text-white h-full w-full">
+									Meet the Team
+								</button>
+							</Link>
+							<Link className="w-1/3" to="/join">
+								<button className="py-1 px-3 xl:p-3 bg-white h-full w-full">
+									Join
+								</button>
+							</Link>
 						</div>
 					</div>
 					<div className="w-full xl:w-7/12">
@@ -65,7 +69,10 @@ const FrontPage = ({ data }) => {
 					<div className="container mx-auto">
 						{infoSections.map((section) => {
 							return (
-								<div key={section.order} className="flex flex-col xl:grid xl:grid-flow-col xl:grid-cols-2 xl:justify-items-center">
+								<div
+									key={section.order}
+									className="flex flex-col xl:grid xl:grid-flow-col xl:grid-cols-2 xl:justify-items-center"
+								>
 									<div
 										className={`flex flex-col items-center xl:items-start justify-center text-center xl:text-left ${
 											section.order % 2
