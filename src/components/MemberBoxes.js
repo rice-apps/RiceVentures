@@ -1,4 +1,5 @@
 import * as React from "react";
+import Img from "gatsby-image";
 
 const teamMembers = [
 	{
@@ -47,12 +48,12 @@ const MemberBox = ({
 }) => {
 	return (
 		<div className="flex flex-col items-center w-full lg:w-4/6">
-			<img className="w-full lg:w-3/4 h-auto rounded-full mb-6" src={teamMembers[0].image}></img>
+			<Img className="w-full lg:w-3/4 h-auto rounded-full mb-6" fluid={image.fluid} />
 			<h2 className="font-medium text-xl lg:text-2xl uppercase mb-2">
 				{firstName} {lastName}
 			</h2>
 			<h6 className="font-light text-xs">{role}</h6>
-			<p className="font-light text-md mt-2 leading-relaxed">{teamMembers[0].description}</p>
+			<p dangerouslySetInnerHTML={{ __html: description.content.content }} className="font-light text-md mt-2 leading-relaxed"></p>
 			<div className="flex flex-row gap-x-5 items-center mt-2 text-xs underline">
 				<a href={email}>{email}</a>
 				<a href={linkedIn}>LinkedIn</a>

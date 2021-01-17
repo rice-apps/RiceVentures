@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql } from 'gatsby'
+import { graphql } from 'gatsby';
 import MemberBoxes from "../components/MemberBoxes";
 import "../styles/Meet.css";
 import TwoColumn from "../components/TwoColumn";
@@ -43,12 +43,14 @@ export const query = graphql`
 				group
 				order
 				image {
-					id
+					fluid {
+						...GatsbyContentfulFluid
+					}
 				}
 				role
 				description {
 					raw
-				}
+      			}
 				email
 			}
 		}
