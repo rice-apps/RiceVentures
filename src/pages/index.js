@@ -2,16 +2,33 @@ import { graphql, Link } from "gatsby";
 import * as React from "react";
 import Layout from "../layouts/Layout.js";
 import Img from "gatsby-image";
+import Contact from "../components/Contact.js";
 
-const sections = [
-	{ title: "What We Do", image: "", order: 1 },
-	{ title: "Previous Work", image: "", order: 2 },
-	{ title: "Illuminated Publication", image: "", order: 3 },
-];
+import { BLOCKS } from "@contentful/rich-text-types";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
+
+const formatInfoSections = (data) => {
+	// First get the nodes
+	const nodes = data.infoSections.edges.map((edge) => edge.node);
+	// Sort by order
+	nodes.sort((a, b) => a.order - b.order);
+	// Fix content
+	nodes.forEach((node) => {
+		const options = {
+			renderNode: {
+				[BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+			},
+		};
+		const renderedRichText = renderRichText(node.content, options);
+		node.renderedContent = renderedRichText;
+	});
+	return nodes;
+};
 
 // markup
 const FrontPage = ({ data }) => {
-	const mission = data.mission.nodes[0].mission;
+	const infoSections = formatInfoSections(data);
+	const { mission, missionSubtext, image: missionImage } = data.missionInfo;
 
 	return (
 		<main>
@@ -26,22 +43,52 @@ const FrontPage = ({ data }) => {
 							</span>
 						</p>
 						<p className="font-light text-xl py-5">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor.
+							{missionSubtext}
 						</p>
 						<div className="w-full xl:w-3/4 flex flex-row justify-center xl:justify-start uppercase">
-							<button className="py-1 px-3 xl:p-3 bg-blue-800 w-1/3 mr-10">
+							<button className="py-1 px-3 xl:p-3 bg-navy text-white w-1/3 mr-10">
 								Meet the Team
 							</button>
-							<button className="py-1 px-3 xl:p-3 bg-blue-800 w-1/3">
+							<button className="py-1 px-3 xl:p-3 bg-white w-1/3">
 								Join
 							</button>
 						</div>
 					</div>
 					<div className="w-full xl:w-7/12">
-						<Img fluid={data.missionImage.childImageSharp.fluid} />
+						<Img fluid={missionImage.fluid} />
 					</div>
 				</div>
+				<div className="w-screen">
+					<Img fluid={data.curvedImage.childImageSharp.fluid} />
+				</div>
+				<div className="bg-navy text-white pb-10">
+					<div className="container mx-auto">
+						{infoSections.map((section) => {
+							return (
+								<div key={section.order} className="flex flex-col xl:grid xl:grid-flow-col xl:grid-cols-2 xl:justify-items-center">
+									<div
+										className={`flex flex-col items-center xl:items-start justify-center text-center xl:text-left ${
+											section.order % 2
+												? ""
+												: "xl:col-end-reverse"
+										} p-5 xl:px-0`}
+									>
+										<p className="font-extrabold text-3xl xl:text-6xl">
+											{section.title}{" "}
+										</p>
+										<div className="font-light text-lg py-5">
+											{section.renderedContent}
+										</div>
+									</div>
+									<div className="w-full xl:w-9/12">
+										<Img fluid={section.image.fluid} />
+									</div>
+								</div>
+							);
+						})}
+					</div>
+				</div>
+				<Contact />
 			</Layout>
 		</main>
 	);
@@ -49,16 +96,34 @@ const FrontPage = ({ data }) => {
 
 export const query = graphql`
 	query {
-		mission: allContentfulMission {
-			nodes {
-				mission
+		missionInfo: contentfulMission {
+			mission
+			missionSubtext
+			image {
+				fluid(maxWidth: 450) {
+					...GatsbyContentfulFluid
+				}
 			}
 		}
-		missionImage: file(
-			relativePath: { eq: "business-deal-2043009-1730196 1.png" }
-		) {
+		infoSections: allContentfulInfoSection {
+			edges {
+				node {
+					title
+					content {
+						raw
+					}
+					image {
+						fluid(maxWidth: 450) {
+							...GatsbyContentfulFluid
+						}
+					}
+					order
+				}
+			}
+		}
+		curvedImage: file(relativePath: { eq: "curved.png" }) {
 			childImageSharp {
-				fluid(maxWidth: 450) {
+				fluid(maxWidth: 1920) {
 					...GatsbyImageSharpFluid
 				}
 			}

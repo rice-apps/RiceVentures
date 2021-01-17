@@ -7,7 +7,7 @@ input, textarea, button {
 }
 
 .socialMediaButton {
-    @apply my-10 w-5 h-5 rounded-sm;
+    @apply my-10 w-10 h-10 bg-white rounded-lg;
 }
 
 .submitButton {

@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 
 const Layout = ({ children }) => {
 	return (
-		<div className="flex flex-col justify-between w-screen">
+		<div className="flex flex-col bg-teal-storm min-h-screen justify-between w-screen">
 			<Navbar />
 			{children}
 			<Footer />

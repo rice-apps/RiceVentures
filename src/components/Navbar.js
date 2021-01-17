@@ -14,13 +14,14 @@ const Navbar = () => {
 	const [open, setOpen] = React.useState(false);
 
 	return (
-		<div className="container mx-auto flex flex-col items-center xl:flex-row uppercase py-5">
-			<p className="text-xl flex-grow">Rice Ventures</p>
+		<div className="container mx-auto flex flex-col items-center text-navy xl:flex-row uppercase py-5">
+			<Link to="/" className="text-xl flex-grow">Rice Ventures</Link>
 			<div className="flex flex-col items-center xl:flex-row">
 				{(isMobile && open) || isBrowser ? (
 					<>
 						{pages.map((page) => (
 							<Link
+								key={page.link}
 								className="text-md xl:text-xl px-5"
 								to={page.link}
 							>

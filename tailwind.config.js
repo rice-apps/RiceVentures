@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         'teal-storm': '#D2E8E6',
         'navy': '#153463',
+      },
+      gridColumnEnd: {
+        'reverse': '-1'
       }
     },
     fontFamily: {
