@@ -25,7 +25,7 @@ const FrontPage = ({ data }) => {
 		<main>
 			<title>Rice Ventures</title>
 			<Layout>
-				<div className="container mx-auto flex flex-col xl:grid xl:grid-cols-2 xl:justify-items-center items-center">
+				<div className="container mx-auto flex flex-col xl:grid xl:grid-cols-2 xl:justify-items-center items-center px-5">
 					<div className="flex flex-col items-center xl:items-start text-center xl:text-left">
 						<p className="font-black text-3xl xl:text-6xl">
 							{mission}{" "}

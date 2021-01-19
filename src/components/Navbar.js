@@ -14,7 +14,7 @@ const Navbar = () => {
 	const [open, setOpen] = React.useState(false);
 
 	return (
-		<div className="container mx-auto flex flex-col items-center text-navy md:flex-row uppercase py-5 px-5 xl:px-0">
+		<div className="container mx-auto flex flex-col items-center text-navy md:flex-row uppercase py-5 px-5">
 			<Link to="/" className="text-xl flex-grow">Rice Ventures</Link>
 			<div className="flex flex-col items-center md:flex-row">
 				{(isMobile && open) || isTablet || isBrowser ? (

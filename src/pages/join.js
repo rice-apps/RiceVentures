@@ -5,24 +5,15 @@ import "../styles/Join.css";
 import Layout from "../layouts/Layout.js";
 import { graphql } from "gatsby";
 
-import { BLOCKS } from "@contentful/rich-text-types";
-import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { formatRichText } from "../utils/contentfulUtils";
 
 const formatInfoSections = (data) => {
 	// Turn into nodes
-	const nodes = data.infoSections.edges.map((edge) => edge.node);
+	let nodes = data.infoSections.edges.map((edge) => edge.node);
 	// Sort according to order
 	nodes.sort((a, b) => a.order - b.order);
 	// Fix content
-	nodes.forEach((node) => {
-		const options = {
-			renderNode: {
-				[BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
-			},
-		};
-		const renderedRichText = renderRichText(node.content, options);
-		node.renderedContent = renderedRichText;
-	});
+	nodes = formatRichText(nodes, "content");
 	return nodes;
 };
 
