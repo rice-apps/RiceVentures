@@ -4,24 +4,15 @@ import Layout from "../layouts/Layout.js";
 import Img from "gatsby-image";
 import Contact from "../components/Contact.js";
 
-import { BLOCKS } from "@contentful/rich-text-types";
-import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { formatRichText } from "../utils/contentfulUtils.js";
 
 const formatInfoSections = (data) => {
 	// First get the nodes
-	const nodes = data.infoSections.edges.map((edge) => edge.node);
+	let nodes = data.infoSections.edges.map((edge) => edge.node);
 	// Sort by order
 	nodes.sort((a, b) => a.order - b.order);
-	// Fix content
-	nodes.forEach((node) => {
-		const options = {
-			renderNode: {
-				[BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
-			},
-		};
-		const renderedRichText = renderRichText(node.content, options);
-		node.renderedContent = renderedRichText;
-	});
+	// Format rich text in content field
+	nodes = formatRichText(nodes, "content");
 	return nodes;
 };
 

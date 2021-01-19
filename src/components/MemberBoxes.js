@@ -1,4 +1,6 @@
 import * as React from "react";
+import Img from "gatsby-image";
+import { formatRichText } from "../utils/contentfulUtils";
 
 const teamMembers = [
 	{
@@ -37,23 +39,29 @@ const teamMembers = [
 ];
 
 const MemberBox = ({
-	image,
 	firstName,
 	lastName,
+	linkedIn,
+	image,
 	role,
 	description,
+	renderedContent,
 	email,
-	linkedIn,
 }) => {
 	return (
-		<div className="flex flex-col items-center w-5/6">
-			<img className="w-1/2 h-auto rounded-full mb-5" src={image}></img>
-			<h2 className="font-bold text-2xl uppercase mb-5">
+		<div className="flex flex-col items-center w-full lg:w-4/6 pb-10 lg:pb-0">
+			<Img
+				className="w-full md:w-3/4 h-auto rounded-full mb-6"
+				fluid={image.fluid}
+			/>
+			<h2 className="font-medium text-xl lg:text-2xl uppercase mb-2">
 				{firstName} {lastName}
 			</h2>
-			<h6 className="font-light text-lg">{role}</h6>
-			<p className="font-light text-xl mt-5">{description}</p>
-			<div className="grid grid-cols-2 items-center mt-5 gap-0 underline">
+			<h6 className="font-light text-xs">{role}</h6>
+			<div className="font-light text-md mt-2 leading-relaxed">
+				{renderedContent}
+			</div>
+			<div className="w-full lg:w-4/6 flex flex-row justify-evenly items-center mt-2 text-xs underline">
 				<a href={email}>{email}</a>
 				<a href={linkedIn}>LinkedIn</a>
 			</div>
@@ -61,11 +69,12 @@ const MemberBox = ({
 	);
 };
 
-const MemberBoxes = () => {
+const MemberBoxes = ({ people }) => {
+	people = formatRichText(people, "description");
 	return (
-		<div className="grid grid-cols-3 items-center justify-items-center">
-			{teamMembers.map((member) => (
-				<MemberBox {...member} />
+		<div className="grid grid-cols-1 lg:grid-cols-3 items-start justify-items-center gap-6 lg:gap-0 px-10 md:px-40 lg:px-20">
+			{people.map((person) => (
+				<MemberBox {...person} />
 			))}
 		</div>
 	);
