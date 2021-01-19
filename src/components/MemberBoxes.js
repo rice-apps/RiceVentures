@@ -61,7 +61,7 @@ const MemberBox = ({
 			<div className="font-light text-md mt-2 leading-relaxed">
 				{renderedContent}
 			</div>
-			<div className="flex flex-row gap-x-5 items-center mt-2 text-xs underline">
+			<div className="w-full lg:w-4/6 flex flex-row justify-evenly items-center mt-2 text-xs underline">
 				<a href={email}>{email}</a>
 				<a href={linkedIn}>LinkedIn</a>
 			</div>
