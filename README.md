@@ -2,7 +2,16 @@
   Rice Ventures Website
 </h1>
 
-## 🚀 Quick start
+# Client FAQs & Troubleshooting
+*I just updated an item on Contentful, but I don't see it showing up on the website.* 
+
+**There could be a few possibilities in this situation:**
+1. Ensure that you published the changes on Contentful; the rebuilding process for the website is only set to occur after publish events on Contentful.
+2. Make sure to wait 2-3 minutes after publishing your changes, as the rebuilding process requires this much time to rebuild.
+3. If the content you changed includes a rich text field or image (ex: Rice Ventures Leadership members), make sure these fields are completed; if they are not, the rebuilding process will fail. This will be fixed soon.
+
+
+# 🚀 Quick start for Developers
 
 1.  **Pull the latest version from here or clone the repo for the first time.**
 
