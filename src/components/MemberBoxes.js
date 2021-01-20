@@ -49,7 +49,7 @@ const MemberBox = ({
 	email,
 }) => {
 	return (
-		<div className="flex flex-col items-center w-full lg:w-4/6 pb-10 lg:pb-0">
+		<div className="flex flex-col items-center w-full lg:w-4/6 pb-10">
 			<Img
 				className="w-full md:w-3/4 h-auto rounded-full mb-6"
 				fluid={image.fluid}
