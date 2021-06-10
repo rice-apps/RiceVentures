@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{"Cuy+":function(e,n,t){"use strict";t.r(n);var l=t("q1tI"),u=t("6+GL"),a=t("e3TN");t("LkD9");n.default=function(){return l.createElement("main",null,l.createElement("title",null,"Rice Ventures"),l.createElement(a.a,null,l.createElement(u.a,null)))}},LkD9:function(e,n,t){}}]);
+//# sourceMappingURL=component---src-pages-contact-js-c6c4079cec56655dd7cd.js.map
